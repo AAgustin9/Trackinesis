@@ -9,3 +9,5 @@ backend/node_modules
 
 .idea/workspace.xml
 
+backend/node_modules
+frontend/node_modules
