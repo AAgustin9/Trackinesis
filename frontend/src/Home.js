@@ -4,7 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Signup from './Signup'
 import Home from './Home'
 
-function App() {
+function Home() {
     return (
         <BrowserRouter>
             <Routes>
@@ -16,4 +16,4 @@ function App() {
     )
 }
 
-export default App;
+export default Home;
