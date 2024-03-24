@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import Validation from './SignupValidation';
+import Validation from './SignupStepTwoValidation';
 import axios from 'axios';
 
 function SignupStepTwo() {
 
-    const [values, setValues] = useState({
+    const [valuesStepTwo, setValues] = useState({
         age: '',
         weight: '',
         height: '',
@@ -20,7 +20,7 @@ function SignupStepTwo() {
 
     const handleSubmit =(event) => {
         event.preventDefault();
-        setErrors(Validation(values));
+        setErrors(Validation(valuesStepTwo));
         if (Object.keys(errors).length === 0) {
             axios.post('http://localhost:8081/signupsteptwo', values)
             .then(res => {
@@ -64,7 +64,7 @@ function SignupStepTwo() {
                         </select>
                         {errors.gender && <span className='text-danger'> {errors.gender}</span>}
                     </div>
-                    <button type='submit' className='btn btn-success w-100 rounded-0'> Join the Club!</button>
+                    <button type='submit' className='btn btn-success w-100 rounded-0'>Join the Club!</button>
                     <p>You are agree to our terms and policies</p>
                 </form>
             </div>

@@ -65,7 +65,7 @@ function Signup() {
                             onChange={handleInput} className='form-control rounded 0'/>
                         {errors.password && <span className='text-danger'> {errors.password}</span>}
                     </div>
-                    <button type='submit' className='btn btn-success w-100 rounded-0'> Next</button>
+                    <button type='submit' className='btn btn-success w-100 rounded-0'>Next</button>
                     <p>You are agree to our terms and policies</p>
                 </form>
             </div>
