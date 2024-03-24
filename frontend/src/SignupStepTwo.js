@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function SignupStepTwo() {
 
-    const [valuesStepTwo, setValues] = useState({
+    const [values, setValues] = useState({
         age: '',
         weight: '',
         height: '',
@@ -20,7 +20,7 @@ function SignupStepTwo() {
 
     const handleSubmit =(event) => {
         event.preventDefault();
-        setErrors(Validation(valuesStepTwo));
+        setErrors(Validation(values));
         if (Object.keys(errors).length === 0) {
             axios.post('http://localhost:8081/signupsteptwo', values)
             .then(res => {
