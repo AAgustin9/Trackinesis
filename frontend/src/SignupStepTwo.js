@@ -64,8 +64,8 @@ function SignupStepTwo() {
                         </select>
                         {errors.gender && <span className='text-danger'> {errors.gender}</span>}
                     </div>
+                    <p>By clicking here you agree with our terms of service.</p>
                     <button type='submit' className='btn btn-success w-100 rounded-0'>Join the Club!</button>
-                    <p>You are agree to our terms and policies</p>
                 </form>
             </div>
         </div>

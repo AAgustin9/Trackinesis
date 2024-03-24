@@ -66,7 +66,6 @@ function Signup() {
                         {errors.password && <span className='text-danger'> {errors.password}</span>}
                     </div>
                     <button type='submit' className='btn btn-success w-100 rounded-0'>Next</button>
-                    <p>You are agree to our terms and policies</p>
                 </form>
             </div>
         </div>
