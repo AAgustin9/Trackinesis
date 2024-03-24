@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Validation from './SignupValidation';
 import axios from 'axios';
+import './styles.css';
 
 function Signup() {
 
@@ -30,7 +31,7 @@ function Signup() {
     };
 
     return (
-        <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
+        <div className='main-page-format'>
             <div className='bg-white p-4 rounded w-25'>
                 <Link to="/" className='btn btn-default border w-20 bg-light rounded-0 text-decoration-none'>Back</Link>
                 <h2>Sign-Up</h2>

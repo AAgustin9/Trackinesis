@@ -1,6 +1,7 @@
 import React, { /*useState*/ } from 'react'
 import { Link, /*useNavigate*/ } from 'react-router-dom'
 //import axios from 'axios';
+import './styles.css';
 
 function Home() {
 
@@ -15,7 +16,7 @@ function Home() {
     const dayName = getDayName(today);
 
     return (
-        <div className='d-flex justify-content-center allign-items-center bg-primary vh-100'>
+        <div className='main-page-format'>
             <div className='bg-white p-3 rounded w-25'>
                 <h2>Hi getName()</h2>
                 <h3>Today is {dayName}</h3>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Validation from './LoginValidation';
 import axios from 'axios';
+import './styles.css';
 
 
 function Login() {
@@ -34,7 +35,7 @@ function Login() {
         }
 
     return (
-        <div className='d-flex justify-content-center allign-items-center bg-primary vh-100'>
+        <div className='main-page-format'>
             <div className='bg-white p-3 rounded w-25'>
                 <h2>Log-In</h2>
                 <form action="" onSubmit={handleSubmit}>
