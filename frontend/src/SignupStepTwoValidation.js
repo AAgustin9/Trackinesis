@@ -1,40 +1,43 @@
-function Validation(values) {
+function Validation(valuesStepTwo) {
     let error = {}
 
-    if (values.age === "") {
+    if (valuesStepTwo.age === "") {
         error.age = "Age should not be empty";
     } 
-    else if (isNaN(values.age)) {
-        error.age = "Age must be a number";
-    } 
-    else if (values.age > 117) {
+    else if (valuesStepTwo.age > 117) {
         error.age = "Age must be smaller than 117";
     }
+    else {
+        error.age = ""
+    }
 
-    if (values.weight === "") {
+    if (valuesStepTwo.weight === "") {
         error.weight = "Weight should not be empty";
     } 
-    else if (isNaN(values.weight)) {
-        error.weight = "Weight must be a number";
-    } 
-    else if (values.weight <= 0) {
+    else if (valuesStepTwo.weight <= 0) {
         error.weight = "Weight must be greater than 0";
     }
-
-    if (values.height === "") {
-        error.height = "Height should not be empty";
-    } 
-    else if (isNaN(values.height)) {
-        error.height = "Height must be a number";
-    } 
-    else if (values.height <= 0) {
-        error.height = "Height must be greater than 0";
+    else {
+        error.weight = ""
     }
 
-    if (!values.gender) {
-        error.gender = "Gender should be selected";
+    if (valuesStepTwo.height === "") {
+        error.height = "Height should not be empty";
+    } 
+    else if (valuesStepTwo.height <= 0) {
+        error.height = "Height must be greater than 0";
+    }
+    else {
+        error.height = ""
+    }
+
+    if(valuesStepTwo.gender === "") {
+        error.gender = "Gender should not be empty"
+    }
+    else {
+        error.gender = ""
     }
     return error;
 }
 
-export default Validation;
+export default Validation

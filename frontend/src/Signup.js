@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function Signup() {
 
-    const [values, setValues] = useState({
+    const [valuesStepOne, setValues] = useState({
         name: '',
         email: '',
         password: ''
@@ -19,9 +19,9 @@ function Signup() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setErrors(Validation(values));
-        if (Object.keys(errors).length === 0) {
-            axios.post('http://localhost:8081/signup', values)
+        setErrors(Validation(valuesStepOne));
+        if (errors.name === "" && errors.email === "" && errors.password === "") {
+            axios.post('http://localhost:8081/signup', valuesStepOne)
                 .then(res => {
                     navigate('/signupsteptwo');
                 })
