@@ -1,5 +1,23 @@
+.main-page-format {
+    --bs-bg-opacity : 1;
+	background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
+
+	justify-content: center;
+	
+	height: 100vh;
+
+	display: flex;
+
+	box-sizing: border-box;
+	
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.8); /*Last num is for opacity*/
+    padding: 2rem; /* Padding */
+}
 
 .bottom-right-button-container {
     position: absolute;
     bottom: 1rem;
-  }
+}
